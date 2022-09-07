@@ -6,11 +6,12 @@ function suma(int $n1, int $n2) : int {
 
 echo suma(4, 6);
 
-class Dummy {}
-
-
-function clases(Dummy $n1, int $n2) : void {
-
+class Dummy {
+    public $un_valor = "Cualquier cosa";
 }
 
-echo clases( new Dummy, 3);
+function clases(Dummy $n1) : void {
+    echo $n1->un_valor;
+}
+
+clases( new Dummy);
